@@ -64,7 +64,7 @@ func philo(id int) {
 			state = 1
 		} else if state == 1 {
 			//enough eaten, release forks and go to sleep
-			//do not forget to release both f
+			//do not forget to release both forks
 			forks[forkLeft].Unlock()
 			log.Println(",Philosopher,", id, ",left released")
 			forks[forkRight].Unlock()
