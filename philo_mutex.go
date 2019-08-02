@@ -23,7 +23,7 @@ import (
 var forks [5]sync.Mutex
 
 func philo(id int) {
-	//We wat to log to a file
+	//We want to log to a file
 	f, err := os.OpenFile("philo_mutex.log", os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
 	if err != nil {
 		log.Fatalf("error opening file: %v", err)
