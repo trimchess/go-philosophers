@@ -1,7 +1,7 @@
 package main
 
 /**
-  Extended version MWI
+  Extended version trimchess
 	Each fork is a mutex, philos have a state 0 (sleeping) or 1 (eating)
 	When a philo wakes up, he fetches its forks and starts eating
 	After the eat timeout, he releases its forks and goes back sleeping
@@ -22,6 +22,8 @@ import (
 //array, each position representing a fork
 var forks [5]sync.Mutex
 
+//This is one of n philosopher
+//He likes to sleep (or think) and eat
 func philo(id int) {
 	//We want to log to a file
 	f, err := os.OpenFile("philo_mutex.log", os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
